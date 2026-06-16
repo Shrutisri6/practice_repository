@@ -1,0 +1,17 @@
+name: Deployment Simulation
+
+on:
+  workflow_run:
+    workflows: ["Release Pipeline"]
+    types:
+      - completed
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Simulated Deployment
+        run: |
+          echo "Deploying Student Result Management System..."
+          echo "Deployment Successful!"
